@@ -41,4 +41,6 @@ VOLUME ["/home/chrome"]
 
 RUN useradd -m -G pulse-access chrome
 
+ADD autoregister.properties /var/lib/go-agent/config/autoregister.properties
+
 RUN ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
