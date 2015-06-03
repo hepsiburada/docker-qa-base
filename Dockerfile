@@ -35,7 +35,7 @@ RUN dpkg -i /chrome.deb && rm /chrome.deb
 
 RUN ln -s /lib/x86_64-linux-gnu/libudev.so.1 /lib/x86_64-linux-gnu/libudev.so.0
 
-COPY chrome-box/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 VOLUME ["/home/chrome"]
 
